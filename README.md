@@ -1,2 +1,3 @@
-# urban-system
-New drivers could book a driving tour with a experienced tutor
+# Driving-Booking System for new drivers
+- This project was created by Jiaxuan Wu 
+- This repository is under continous developing by Jiaxuan Wu. 
