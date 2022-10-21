@@ -8,27 +8,27 @@ import java.util.List;
 @RequestMapping(path = "api/v2/customer")
 
 @RestController
-public class CustomerControllerV2 {
-    private final CustomerService customerService;
+public class StudentControllerV2 {
+    private final StudentService studentService;
 
     @Autowired
-    public CustomerControllerV2(CustomerService customerService) {
-        this.customerService = customerService;
+    public StudentControllerV2(StudentService studentService) {
+        this.studentService = studentService;
     }
     @GetMapping(value = "all")
-    public List<Customer> getCustomer(){
-        return customerService.getCustomer();
+    public List<Student> getCustomer(){
+        return studentService.getCustomer();
     }
 
     @PostMapping
-    void createNewCustomer(@RequestBody Customer customer) {
+    void createNewCustomer(@RequestBody Student student) {
         System.out.println("POST REQUEST.....");
-        System.out.println(customer);
+        System.out.println(student);
     }
     @PutMapping
-    void updateCustomer(@RequestBody Customer customer) {
+    void updateCustomer(@RequestBody Student student) {
         System.out.println("UPDATE REQUEST.....");
-        System.out.println(customer);
+        System.out.println(student);
     }
     @DeleteMapping(path = "{customerId}")
     void deleteCustomer(@PathVariable("customerId") Long id) {

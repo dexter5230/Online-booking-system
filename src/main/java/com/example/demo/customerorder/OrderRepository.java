@@ -1,7 +1,5 @@
 package com.example.demo.customerorder;
 
-import com.example.demo.customer.Customer;
-import com.example.demo.product.Product;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;

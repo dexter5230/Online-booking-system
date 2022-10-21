@@ -1,7 +1,6 @@
 package com.example.demo.customer;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,26 +9,26 @@ import java.util.List;
 @RestController
 @Deprecated
 public class CustomerController {
-    private final CustomerService customerService;
+    private final StudentService studentService;
 
     @Autowired
-    public CustomerController(CustomerService customerService) {
-        this.customerService = customerService;
+    public CustomerController(StudentService studentService) {
+        this.studentService = studentService;
     }
     @GetMapping(value = "all")
-    public List<Customer> getCustomer(){
-        return customerService.getCustomer();
+    public List<Student> getCustomer(){
+        return studentService.getCustomer();
     }
 
     @PostMapping
-    void createNewCustomer(@RequestBody Customer customer) {
+    void createNewCustomer(@RequestBody Student student) {
         System.out.println("POST REQUEST.....");
-        System.out.println(customer);
+        System.out.println(student);
     }
     @PutMapping
-    void updateCustomer(@RequestBody Customer customer) {
+    void updateCustomer(@RequestBody Student student) {
         System.out.println("UPDATE REQUEST.....");
-        System.out.println(customer);
+        System.out.println(student);
     }
     @DeleteMapping(path = "{customerId}")
     void deleteCustomer(@PathVariable("customerId") Long id) {

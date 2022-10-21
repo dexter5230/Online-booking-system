@@ -1,8 +1,5 @@
 package com.example.demo.customerorder;
 
-import com.example.demo.customer.Customer;
-import com.example.demo.product.Product;
-
 public class Order {
     private final int orderNu;
     private final String productName;
